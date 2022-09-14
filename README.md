@@ -1,0 +1,2 @@
+# Game-Programming-Space-Invaders-using-SDL-2.0-framework
+This semester project was conducted in line with the course CS112-Object Oriented Programming. Main goal was to apply the concepts of OOP in a practical program such as polymorphism, inheritance, and composition. A demo video was filmed by me showcasing and explaining the working of the code. The video is uploaded at: https://www.youtube.com/watch?v=bufoXivTz-Y&amp;t=3s
