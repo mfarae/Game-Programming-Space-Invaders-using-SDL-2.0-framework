@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb)",
+            "type": "cppdbg",
+            "request": "launch",
+            // directory of same file that is executable as in tasks.json
+            "program": "${workspaceFolder}\\demo.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            //debugger path same as the compiler
+            "miDebuggerPath": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enably pretty printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // label of the task from tasks.json
+            "preLaunchTask": "democompile"
+        }
+    ]
+}

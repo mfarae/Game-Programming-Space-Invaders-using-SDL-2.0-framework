@@ -1,0 +1,61 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+            // label gives your task a name
+			"label": "democompile",
+            //Set your compiler (g++.exe) path below
+			"command": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe",
+			"args": [
+
+				"-std=c++11",
+				"-g", // compile in debug mode
+				"alien.cpp", // path to .cpp to compile
+                "background.cpp",
+                "bullet.cpp",
+                "game.cpp",
+                "main.cpp",
+				"spaceship.cpp",
+				"viewingwindow.cpp",
+				"sound.cpp",
+				"mytexture.cpp",
+                //if more files mention separately
+                //if 100's of files, write *.cpp and it means
+                //all files having extension .cpp
+				"-o", // --> change output file name
+                // the file path where .exe file will be posted
+				"demo.exe", // new output file name
+                // -I option to give path to find header files (.h):
+				"-IC:\\Program Files\\SDL2-2.0.14\\x86_64-w64-mingw32\\include\\SDL2",
+                "-IC:\\Program Files\\SDL2_image-2.0.5\\x86_64-w64-mingw32\\include\\SDL2",
+				"-IC:\\Program Files\\SDL2_ttf-2.0.15\\x86_64-w64-mingw32\\include\\SDL2",
+				"-IC:\\Program Files\\SDL2_mixer-2.0.4\\x86_64-w64-mingw32\\include\\SDL2",
+                // -L option to give path to find library files (.lib):
+                "-LC:\\Program Files\\SDL2-2.0.14\\x86_64-w64-mingw32\\lib",
+                "-LC:\\Program Files\\SDL2_image-2.0.5\\x86_64-w64-mingw32\\lib",
+				"-LC:\\Program Files\\SDL2_ttf-2.0.15\\x86_64-w64-mingw32\\lib",
+				"-LC:\\Program Files\\SDL2_mixer-2.0.4\\x86_64-w64-mingw32\\lib",
+                // -l option to link with specific libraries in the same directory
+                "-lmingw32", // link with mingw34
+				"-lSDL2main", // link with SDL2main library
+				"-lSDL2", // link with SDL2 library
+                "-lSDL2_image",
+				"-lSDL2_ttf",
+				"-lSDL2_mixer",
+				"-mwindows", // vscode option to suppress window
+                "-mconsole" // show output
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
